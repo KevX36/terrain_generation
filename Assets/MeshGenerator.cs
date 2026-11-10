@@ -28,10 +28,10 @@ public class MeshGenerator : MonoBehaviour
     }
     public int xSize = 20;
     public int zSize = 20;
-    
 
-    
-    
+
+    public System.Random RNG = new System.Random();
+
     public void GenerateCity()
     {
         vertices = new Vector3[(xSize + 1) * (zSize +1)];
@@ -40,7 +40,10 @@ public class MeshGenerator : MonoBehaviour
         {
             for (int x = 0; x <= xSize; x++)
             {
-                vertices[i] = new Vector3(x, 0, z);
+                int y = RNG.Next(-4, 5);
+
+
+                vertices[i] = new Vector3(x, y, z);
 
                 
 
