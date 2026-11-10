@@ -40,7 +40,7 @@ public class MeshGenerator : MonoBehaviour
         {
             for (int x = 0; x <= xSize; x++)
             {
-                int y = RNG.Next(-4, 5);
+                int y = RNG.Next(-2, 3);
 
 
                 vertices[i] = new Vector3(x, y, z);
