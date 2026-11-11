@@ -466,6 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeshGenerator
   xSize: 50
   zSize: 50
+  highetStrngth: 0.9
 --- !u!4 &975500721
 Transform:
   m_ObjectHideFlags: 0
