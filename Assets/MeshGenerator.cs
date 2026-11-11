@@ -29,18 +29,19 @@ public class MeshGenerator : MonoBehaviour
     public int xSize = 20;
     public int zSize = 20;
 
+    public float highetStrngth = 0.3f;
 
     public System.Random RNG = new System.Random();
 
     public void GenerateCity()
     {
         vertices = new Vector3[(xSize + 1) * (zSize +1)];
-        
+        float y;
         for (int i = 0, z = 0; z <= zSize; z++)
         {
             for (int x = 0; x <= xSize; x++)
             {
-                int y = RNG.Next(-2, 3);
+                y =Mathf.PerlinNoise(x * highetStrngth, z * highetStrngth) * 2f;
 
 
                 vertices[i] = new Vector3(x, y, z);
